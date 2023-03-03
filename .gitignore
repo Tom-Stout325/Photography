@@ -1,0 +1,12 @@
+.vscode/* 
+.DS_Store
+*.DS_Store
+**/.DS_Store
+
+.env
+.smug
+env/
+smug/
+ENV/
+env.bak/
+smug.bak/

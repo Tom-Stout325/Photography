@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+      <div 
+        class="col-sm-4" 
+        style="width: 100%; margin: auto">
+        <img
+          style="width: 100%"
+          src="{% static 'tsplogo.png' %}"
+          alt="logo"/>
+      </div>
+      <div
+        class="col-sm-6"
+        style="width: 100%; 
+          margin: auto; 
+          margin-top: 5rem; 
+          padding: 3rem">
+    <div class="account-messages">
+    <h4>
+        Username Reminder
+    </h4>
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button 
+            class="btn btn-primary">
+            Next
+         </button>
+    </form>
+    <hr>
+    <ul>
+        <li><a href="{% url 'login' %}">Log in</a> </li>
+    </ul>
+</div>
+{% endblock %}

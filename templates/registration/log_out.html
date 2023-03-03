@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="account-messages">
+    <h4>Logged out</h4>
+    <p> Thanks for visiting!</p>
+    <p><a href="{% url 'login' %}">Log in again</a></p>
+</div>
+{% endblock %}
