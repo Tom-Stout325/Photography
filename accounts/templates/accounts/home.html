@@ -5,20 +5,21 @@
 {% block content %}
 
 
-<div>
+<div style="
+      margin-top: 5vmax;">
   <div class="row">
     <img
-      style="width: 40%; margin: auto"
-      src="{% static 'images/tsplogo.png' %}"/>
+    style="width: 40%; margin: auto"
+    src="{% static 'images/tsplogo.png' %}"/>
   </div>
 </div>
 {% if not request.user.is_authenticated %}
   <div style="margin-top: 7vh">
-    <h3 style="width: 100%; text-align: center; margin: auto">
+    <h3 style="width: 100%; text-align: center; margin: auto; font-size: 2rem;">
       Please <a href="{% url 'login'%}">Login </a>or
       <a href="{% url 'register' %}">Register</a>
     </h3>
   </div>
-{% endif %} 
+  {% endif %}
 
 {% endblock %}
